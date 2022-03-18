@@ -1,61 +1,80 @@
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+@import url("https://use.typekit.net/wkc7lgn.css");
 
 .App {
-  background-color: #282c34;
-  min-height: 100vh;
+  background-color: white;
+}
+
+/* HEADER */
+
+.container_header {
+  width: 100%;
+  height: 6vw;
+
+  font-size: 1vw;
+  font-family: 'Soleil', sans-serif;
+  font-style: normal;
+  font-weight: 300; 
+
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+}
+
+.header_left {
+  width: 60%;
+  display: flex;
   align-items: center;
+}
+
+.header_logo {
+  width: 6vw;
+  height: 3.4vw;
+  margin: 0 2vw 0 6.8vw;
+  background: url('assets/animaide_logo.png') no-repeat;
+  background-size: contain;
+  background-position: center;
+
+  cursor: pointer;
+}
+
+.header_link {
+  width: auto;
+  height: 1.3vw;
+  margin: 0 0.85vw;
+  padding-bottom: 3px;
+  border-bottom: solid 2px white;
+
+  cursor: pointer;
+  transition: all 0.2s ease-in;
+}
+
+.header_link:hover {
+  border-bottom: solid 2px #FCADBD;
+}
+
+.header_right {
+  width: 40%;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+.header_signin {
+   width: 10.6vw;
+   height: 3vw;
+   border-radius: 8px;
+   margin: 0 0.85vw;
+   line-height: 3vw;
+   text-align: center;
+   background-color: #FCADBD;
+   
+   cursor: pointer;
+   transition: all 0.2s ease-in;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.header_signin:hover {
+  background-color: #FCC4CC;
 }
 
-.test-1 {
-  text-align: center;
 
-}
 
-.test-2 {
-  text-align: center;
-  
-}
-.test-3 {
-  text-align: center;
-  
-}
 
-.result {
-  margin: 10%;
-}
-
-.result2 {
-  margin: 10%;
-  padding: 5%;
-  background-color: aliceblue;
-  border-radius: 100px;
-  color: #282c34;
-}
