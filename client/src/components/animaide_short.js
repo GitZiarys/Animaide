@@ -1,7 +1,7 @@
 import React from "react";
 import "../App.css";
 
-const Indexits = () => {
+const AnimaideShort = () => {
   return (
       <div className="container_indexits">
             <div className="indexits_left">
@@ -19,4 +19,4 @@ const Indexits = () => {
   );
 }
 
-export default Indexits;
+export default AnimaideShort;

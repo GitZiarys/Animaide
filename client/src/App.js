@@ -3,13 +3,15 @@ import axios from "axios";
 import "./App.css";
 
 import Header from "./components/header";
-import Indexits from "./components/index_its";
+import AnimaideShort from "./components/animaide_short";
+import AssociationsDisplay from "./components/associations_display";
 
 const App = () => {
   return (
       <div className="App">
        <Header /> 
-       <Indexits />
+       <AnimaideShort />
+       <AssociationsDisplay />
       </div>
   );
 }
