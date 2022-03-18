@@ -4,6 +4,9 @@
   background-color: white;
 }
 
+html {
+  overflow-x: hidden;
+}
 /* HEADER */
 
 .container_header {
@@ -89,6 +92,101 @@
 .signin:hover {
   background-color: #FCC4CC;
   border-color: #FCC4CC;
+}
+
+/* FOOTER */
+
+.container_footer {
+  width: 100%;
+  height: 9.7vw;
+  margin-top: 10vw;
+  background:#FFEFF1;
+
+  display:flex;
+  justify-content: center;
+}
+
+.footer {
+  width:33%;
+  height: inherit;
+}
+
+.footer_left {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  gap: 2vw;
+}
+
+.footer_info {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer_link {
+  text-decoration: none;
+  font-family: 'Soleil', sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 0.8vw;
+  line-height: 1.6vw;
+
+  border-bottom: 1px solid #FFEFF1;
+  transition: all 0.2s ease-in;
+
+  cursor: pointer
+}
+
+.footer_link:hover {
+  border-bottom: 1px solid #F2A3B3;
+}
+
+.footer_title {
+  font-family: 'Soleil', sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1vw;
+}
+
+.footer_center {
+  background: url('assets/animaide_footer_logo.png') no-repeat;
+  background-size: 30%;
+  background-position: center;
+}
+
+
+.footer_right{
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  gap: 1vw;
+}
+
+.footer_icon {
+  width: 2.5vw;
+  height: 2.5vw;
+
+  cursor: pointer
+}
+
+.instagram {
+  background: url('assets/instagram_logo.png') no-repeat;
+  background-size: contain;
+}
+
+.twitter {
+  background: url('assets/twitter_logo.png') no-repeat;
+  background-size: contain;
+}
+
+.facebook {
+  background: url('assets/facebook_logo.png') no-repeat;
+  background-size: contain;
+}
+
+.mail {
+  background: url('assets/mail_logo.png') no-repeat;
+  background-size: contain;
 }
 
 /* INDEXITS */
@@ -222,7 +320,7 @@
 
 .container_animaide_engage {
   width: 100%;
-  margin: 7vw 0 4vw 0;
+  margin: 10svw 0 4vw 0;
 
   display:flex;
   flex-direction: column;
@@ -259,8 +357,6 @@
 .animaide_engage_image {
   width: 2.5vw;
   height: 2.5vw;
-
-  background-color: red;
 }
 
 .volontary {
@@ -313,3 +409,12 @@
   background-color: #FCC4CC;
   border-color: #FCC4CC;
 }
+
+/* RecentMissions */
+
+/* .background {
+  width: 500%;
+  height: 45vw;
+  background-color: #FFEFF1;
+  transform: rotate(-5deg) translateX(-50vw);
+} */
