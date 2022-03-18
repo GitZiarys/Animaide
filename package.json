@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node server/index.js",
+    "start": "concurrently -n 'BACK,FRONT' -c 'green,cyan' \"node server/index.js\" \"npm run client\"",
+    "client": "cd client && npm start",
     "build": "cd client && npm install && npm run build"
   },
   "engines": {
