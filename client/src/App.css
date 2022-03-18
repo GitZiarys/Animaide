@@ -9,11 +9,12 @@
 .container_header {
   width: 100%;
   height: 6vw;
+  margin-bottom: 4.5vw;
 
-  font-size: 1vw;
-  font-family: 'Soleil', sans-serif;
+  font-size: 0.9vw;
+  font-family: "soleil", sans-serif;
+  font-weight: 300;
   font-style: normal;
-  font-weight: 300; 
 
   display: flex;
   flex-direction: row;
@@ -21,6 +22,7 @@
 
 .header_left {
   width: 60%;
+  margin-left:13.6vw;
   display: flex;
   align-items: center;
 }
@@ -28,7 +30,7 @@
 .header_logo {
   width: 6vw;
   height: 3.4vw;
-  margin: 0 2vw 0 6.8vw;
+  margin-right: 2vw;
   background: url('assets/animaide_logo.png') no-repeat;
   background-size: contain;
   background-position: center;
@@ -53,26 +55,119 @@
 
 .header_right {
   width: 40%;
+  margin-right:13.6vw;
   display: flex;
-  justify-content: center;
+  justify-content: right;
   align-items: center;
 }
 
-.header_signin {
+.header_button{
    width: 10.6vw;
    height: 3vw;
    border-radius: 8px;
-   margin: 0 0.85vw;
    line-height: 3vw;
    text-align: center;
-   background-color: #FCADBD;
+   border: 2px solid #FCADBD;
    
    cursor: pointer;
    transition: all 0.2s ease-in;
 }
 
-.header_signin:hover {
+.connect:hover {
+  background: #FCADBD;
+}
+
+.signin:hover {
   background-color: #FCC4CC;
+}
+
+.signin {
+  background-color: #FCADBD;
+  margin-left: 0.85vw;
+}
+
+.signin:hover {
+  background-color: #FCC4CC;
+  border-color: #FCC4CC;
+}
+
+/* INDEXITS */
+
+.container_indexits {
+  width: 100%;
+  height: 25vw;
+
+  display: flex;
+}
+
+.indexits_left {
+  width: 60%;
+  margin-left:13.6vw;
+}
+
+.indexits_title {
+  font-family: 'Soleil', sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 2.5vw;
+}
+
+.indexits_description {
+  width: 28vw;
+  font-family: 'Soleil', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1vw;
+}
+
+.container_indexits_buttons {
+  margin-top: 4.5vw;
+  display: flex;
+}
+
+.indexits_button {
+  width: 10.6vw;
+  height: 3vw;
+  margin: 0 0.85vw;
+  border-radius: 8px;
+  line-height: 3vw;
+  text-align: center;
+
+  font-weight: 500;
+  
+  cursor: pointer;
+  transition: all 0.2s ease-in;
+}
+
+.contact {
+  margin-left: 0;
+  background-color: #FCADBD;
+  border: 2px solid #FCADBD;
+}
+
+.contact:hover {
+  background-color: #FCC4CC;
+  border-color: #FCC4CC;
+}
+
+.missions {
+  border: 2px solid #FCADBD;
+}
+
+.missions:hover {
+  background-color: #FCADBD;
+}
+
+.indexits_right {
+  width: 40%;
+  margin-right:13.6vw;
+}
+
+.indexits_image {
+  height: 25vw;
+  background: url("assets/index_image_doublebubble.png") no-repeat;
+  background-size: contain;
+  background-position-y: center;
 }
 
 

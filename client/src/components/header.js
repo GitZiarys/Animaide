@@ -1,5 +1,5 @@
 import React from "react";
-import "../../App.css";
+import "../App.css";
 
 const Header = () => {
   return (
@@ -11,8 +11,8 @@ const Header = () => {
             <a className="header_link">Pourquoi Animaide ?</a>
           </div>
           <div className="header_right">
-          <a className="header_link">Se connecter</a>
-          <a className="header_signin">S'inscrire</a>
+          <a className="header_button connect">Se connecter</a>
+          <a className="header_button signin">S'inscrire</a>
           </div>
       </div>
   );
