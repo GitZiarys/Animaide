@@ -1,6 +1,6 @@
 const path = require('path');
 const express = require('express');
-const morgan = require('morgan');
+const cors = require('cors');
 const db = require("./schemas/init");
 const Role = db.role;
 require('dotenv').config();
@@ -54,10 +54,10 @@ function initial() {
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
-app.use(morgan('tiny'));
+app.use(cors());
 app.use('/api', routes);
-app.use('/auth.routes', routesAuth);
-app.use('/user.routes', routesUser);
+app.use('/api', routesAuth);
+app.use('/api', routesUser);
 
   
 app.listen(PORT, () => {
