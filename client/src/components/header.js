@@ -9,6 +9,10 @@ import BoardUser from "../components/board-user.component";
 import BoardAdmin from "../components/board-admin.component";
 import { Routes, Route, Link } from "react-router-dom";
 
+const Header_button = {
+    display: "inline-block",
+};
+
 class Header extends React.Component{
   constructor(props) {
     super(props);
@@ -61,11 +65,11 @@ class Header extends React.Component{
             </div>
           ) : (
             <div>
-              <Link className="header_button connect" to={"/login"}>
+              <Link className="header_button connect" to={"/login"} style={Header_button}>
                 Se connecter
               </Link>
 
-              <Link className="header_button signin" to={"/register"}>
+              <Link className="header_button signin" to={"/register"} style={Header_button}>
                 S'inscrire
               </Link>
             </div>
