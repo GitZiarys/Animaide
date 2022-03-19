@@ -5,7 +5,8 @@ const missionSchema = new mongoose.Schema({
     tag: String,
     localisation: String,
     localisationTag: String,
-    link: String
+    link: String,
+    image: String
 });
 
 module.exports = mongoose.model('Mission', missionSchema, 'missions');

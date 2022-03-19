@@ -22,7 +22,7 @@ const AnimaideEngage = () => {
                     <p className="animaide_engage_subtitle_description">Suivez avec nous les causes qui vous importent et sauvez nos amis les animaux</p>
                 </div>
             </div>
-            <a className="animaide_engage_button">Inscription</a>
+            <a className="animaide_engage_button" href="/register">Inscription</a>
         </div>
   );
 }

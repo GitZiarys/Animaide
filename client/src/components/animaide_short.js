@@ -1,8 +1,41 @@
-import React from "react";
+import React, { Component } from "react";
+import UserService from "../services/user.service";
 import "../App.css";
 
+<<<<<<<< HEAD:client/src/components/animaide_short.js
 const AnimaideShort = () => {
   return (
+========
+export default class Indexits extends Component {
+
+    constructor(props) {
+        super(props);
+        this.state = {
+          content: ""
+        };
+      }
+      componentDidMount() {
+        UserService.getPublicContent().then(
+          response => {
+            this.setState({
+              content: response.data
+            });
+          },
+          error => {
+            this.setState({
+              content:
+                (error.response && error.response.data) ||
+                error.message ||
+                error.toString()
+            });
+          }
+        );
+      }
+
+
+  render() {
+      return (
+>>>>>>>> dev:client/src/components/index_its.js
       <div className="container_indexits">
             <div className="indexits_left">
                 <h1 className="indexits_title">Animaide c'est...</h1>
@@ -16,7 +49,12 @@ const AnimaideShort = () => {
                 <div className="indexits_image"></div>
             </div>
       </div>
+<<<<<<<< HEAD:client/src/components/animaide_short.js
   );
 }
 
 export default AnimaideShort;
+========
+      )};
+}
+>>>>>>>> dev:client/src/components/index_its.js
