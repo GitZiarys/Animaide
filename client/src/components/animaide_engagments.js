@@ -3,7 +3,7 @@ import "../App.css";
 
 const AnimaideEngage = () => {
   return (
-        <div className="container_animaide_engage">
+        <section className="container_animaide_engage">
             <h1 className="animaide_engage_title">Ensemble, engageons nous <br/> pour la cause animale</h1>
             <div className="container_animaide_3engages">
                 <div className="animaide_engage">
@@ -23,7 +23,7 @@ const AnimaideEngage = () => {
                 </div>
             </div>
             <a className="animaide_engage_button" href="/register">Inscription</a>
-        </div>
+        </section>
   );
 }
 

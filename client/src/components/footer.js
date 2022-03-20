@@ -3,7 +3,7 @@ import "../App.css";
 
 const Footer = () => {
   return (
-      <div className="container_footer">
+      <section className="container_footer">
           <div className="footer footer_left">
               <div className="footer_info">
                   <h2 className="footer_title">Naviguation</h2>
@@ -25,7 +25,7 @@ const Footer = () => {
               <a className="footer_icon facebook" href="" target="_blank"></a>
               <a className="footer_icon mail"></a>
           </div>
-      </div>
+      </section>
   );
 }
 

@@ -3,7 +3,7 @@ import "../App.css";
 
 const AnimaideShort = () => {
   return (
-      <div className="container_indexits">
+      <section className="container_indexits">
             <div className="indexits_left">
                 <h1 className="indexits_title">Animaide c'est...</h1>
                 <p className="indexits_description">Une plateforme présentant des missions locales se focalisant sur les animaux allant de l’aide en refuges à la préservation d’espèces en danger. </p>
@@ -15,7 +15,7 @@ const AnimaideShort = () => {
             <div className="indexits_right">
                 <div className="indexits_image"></div>
             </div>
-      </div>
+      </section>
   );
 }
 
