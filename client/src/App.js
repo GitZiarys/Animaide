@@ -6,17 +6,34 @@ import AssociationsDisplay from "./components/associations_display";
 import AnimaideEngage from "./components/animaide_engagments";
 import AnimaideRecentMissions from "./components/animaide_recent_mission";
 import Footer from "./components/footer";
+import { Route, Routes } from "react-router-dom";
+import Login from "./components/login";
+import WithNavigate from "./components/login.component";
 const App = () => {
 
   return (
     <div className="App">
-      <Header />
+      <Routes>
+        <Route path="/" element={<>
+          <Header />
+
       <AnimaideShort />
       <AssociationsDisplay />
       <AnimaideEngage />
       <AnimaideRecentMissions />
+      
 
-      <Footer />
+      <Footer /> </>} />
+      <Route path="/login" element={<>
+          <Header />
+          <WithNavigate />
+          <Login />
+
+      
+
+      <Footer /> </>} />
+      
+      </Routes>
       </div> 
       );
 }
