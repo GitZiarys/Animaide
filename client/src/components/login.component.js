@@ -4,7 +4,6 @@ import Input from "react-validation/build/input";
 import CheckButton from "react-validation/build/button";
 import AuthService from "../services/auth.service";
 import {useNavigate} from 'react-router-dom';
-import Header from "../components/header";
 const required = value => {
   if (!value) {
     return (
@@ -16,7 +15,7 @@ const required = value => {
 };
 
 
-class Login extends Component {
+class LoginComp extends Component {
     
   constructor(props) {
     super(props);
@@ -145,7 +144,7 @@ class Login extends Component {
 
 function WithNavigate(props) {
     let navigate = useNavigate();
-    return <Login {...props} navigate={navigate} />
+    return <LoginComp {...props} navigate={navigate} />
 }
 
 export default WithNavigate;
