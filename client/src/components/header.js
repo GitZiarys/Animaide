@@ -53,7 +53,7 @@ class Header extends React.Component{
 
           {currentUser ? (
             <div>
-              <Link to={"/profile"} style={Header_button}>{currentUser.username}</Link>
+              <Link to={"/profile"} style={Header_button}>{currentUser.username} </Link>
 
               <a
                 className="header_button connect"
