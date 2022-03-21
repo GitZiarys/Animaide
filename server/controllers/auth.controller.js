@@ -8,7 +8,8 @@ exports.signup = (req, res) => {
   const user = new User({
     username: req.body.username,
     email: req.body.email,
-    password: bcrypt.hashSync(req.body.password, 8)
+    password: bcrypt.hashSync(req.body.password, 8),
+    profileImage: req.body.profileImage
   });
   user.save((err, user) => {
     if (err) {
@@ -88,7 +89,8 @@ exports.signin = (req, res) => {
         username: user.username,
         email: user.email,
         roles: authorities,
-        accessToken: token
+        accessToken: token,
+        profileImage: user.profileImage
       });
     });
 };

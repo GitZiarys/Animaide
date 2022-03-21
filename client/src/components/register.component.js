@@ -4,7 +4,6 @@ import Input from "react-validation/build/input";
 import CheckButton from "react-validation/build/button";
 import { isEmail } from "validator";
 import AuthService from "../services/auth.service";
-import Header from "../components/header";
 const required = value => {
   if (!value) {
     return (
@@ -53,7 +52,8 @@ class Register extends Component {
       email: "",
       password: "",
       successful: false,
-      message: ""
+      message: "",
+      profileImage: ""
     };
   }
   onChangeUsername(e) {
@@ -82,7 +82,8 @@ class Register extends Component {
       AuthService.register(
         this.state.username,
         this.state.email,
-        this.state.password
+        this.state.password,
+        this.state.profileImage
       ).then(
         response => {
           this.setState({

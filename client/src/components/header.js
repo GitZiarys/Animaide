@@ -53,12 +53,12 @@ class Header extends React.Component{
 
           {currentUser ? (
             <div>
-              <Link to={"/profile"}>{currentUser.username}</Link>
+              <Link to={"/profile"} style={Header_button}>{currentUser.username}</Link>
 
               <a
                 className="header_button connect"
                 href="/login"
-                onClick={this.logOut}
+                onClick={this.logOut} style={Header_button}
               >
                 Déconnexion
               </a>

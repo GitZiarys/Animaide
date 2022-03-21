@@ -2,6 +2,7 @@ const express = require("express");
 const app = express.Router();
 const { authJwt } = require("../middlewares/init");
 const controller = require("../controllers/user.controller");
+const User = require("../schemas/user");
 
   app.use(function(req, res, next) {
     res.header(
@@ -17,5 +18,22 @@ const controller = require("../controllers/user.controller");
     [authJwt.verifyToken, authJwt.isAdmin],
     controller.adminBoard
   );
+  app.put("/test/image", (req, res) => {
+    const username = req.params.currentUser.username
+    User.findOne({ username }).then((data) => {
+      res.json(data);
+    })
+    .catch((error) => {
+      console.log("error: ", error);
+    });
+  })
+  app.get("/test/get", (req, res) => {
+    User.find({}).then((data) => {
+      res.json(data);
+    })
+    .catch((error) => {
+      console.log("error: ", error);
+    });
+  })
 
 module.exports = app;

@@ -5,7 +5,7 @@ const User = require("../schemas/user");
 const router = express.Router();
 
 router.get("/", (req, res) => {
-  Test.find({})
+  Mission.find({})
     .then((data) => {
       res.json(data);
     })

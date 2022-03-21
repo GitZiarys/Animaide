@@ -30,7 +30,6 @@ class LoginComp extends Component {
     };
   }
 
- 
   onChangeUsername(e) {
     this.setState({
       username: e.target.value
@@ -93,6 +92,7 @@ class LoginComp extends Component {
               <label htmlFor="username">Pseudo</label>
               <Input
                 type="text"
+                id="username"
                 className="form-control"
                 name="username"
                 value={this.state.username}
@@ -104,6 +104,7 @@ class LoginComp extends Component {
               <label htmlFor="password">Mot de passe</label>
               <Input
                 type="password"
+                id="username"
                 className="form-control"
                 name="password"
                 value={this.state.password}

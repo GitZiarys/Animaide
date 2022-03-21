@@ -13,6 +13,8 @@ import Footer from "./components/footer";
 import { Route, Routes } from "react-router-dom";
 import Login from "./components/login";
 import WithNavigate from "./components/login.component";
+import Register from "./components/register.component";
+import Profile from "./components/profile.component";
 
 const App = () => {
 
@@ -38,6 +40,23 @@ const App = () => {
           <Header />
           <WithNavigate />
           <Login />
+
+      
+
+
+      <Footer /> </>} />
+      <Route path="/register" element={<>
+          <Header />
+          <Register />
+
+      
+
+
+      <Footer /> </>} />
+
+      <Route path="/profile" element={<>
+          <Header />
+          <Profile />
 
       
 
