@@ -37,7 +37,7 @@ class Header extends React.Component{
   render() {
     const { currentUser, showAdminBoard } = this.state;
     return (
-      <div className="container_header">
+      <section className="container_header">
           <div className="header_left">
             <Link className="header_logo" to={"/"}></Link>
             <a className="header_link">Nos missions</a>
@@ -84,7 +84,7 @@ class Header extends React.Component{
             <Route path="/admin" element={<BoardAdmin />} />
           </Routes>
         </div>
-      </div>
+      </section>
   );
 }
 }
