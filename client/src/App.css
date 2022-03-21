@@ -8,6 +8,10 @@ html {
   overflow-x: hidden;
 }
 
+body {
+  height: 100%;
+}
+
 a {
   text-decoration: none;
   color: unset;
@@ -20,9 +24,9 @@ a {
   margin-bottom: 3vw;
 
   font-size: 0.85vw;
-  font-family: "soleil", sans-serif;
-  font-weight: 100;
+  font-family: 'Soleil', sans-serif;
   font-style: normal;
+  font-weight: 300;
 
   display: flex;
   flex-direction: row;
@@ -97,6 +101,27 @@ a {
 .signin:hover {
   background-color: #FCC4CC;
   border-color: #FCC4CC;
+}
+
+/* HEADERLITE */
+.container_headerlite {
+  width: 100%;
+  height: 6vw;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.headerlite_logo {
+  width: 6vw;
+  height: 3.4vw;
+  margin-left: 13.6vw;
+  background: url('assets/animaide_logo.png') no-repeat;
+  background-size: contain;
+  background-position: center;
+
+  cursor: pointer;
 }
 
 /* FOOTER */
@@ -436,11 +461,11 @@ a {
 
 .container_stake {
   width: 100%;
-  height: 73vw;
+  height: 75vw;
 
   background: white;
   
-  clip-path: polygon(0 calc(100% - 68vw), 100% 0, 100% 100%, 0 100%);
+  clip-path: polygon(0 calc(100% - 70vw), 100% 0, 100% 100%, 0 100%);
 
   display: flex;
   flex-direction: column;
@@ -461,7 +486,7 @@ a {
 .stake_display {
   display: flex;
   flex-direction: column;
-  gap: 1.7vw;
+  gap: 3vw;
 
   margin-top:4vw;
 }
@@ -485,8 +510,25 @@ a {
   width: 10vw;
   padding-bottom: 10vw;
   border-radius: 10px;
+}
 
-  background: url('assets/stake_test.png') no-repeat;
+.image1 {
+  background: url('assets/stake_image1.png') no-repeat;
+  background-size: contain;
+}
+
+.image2 {
+  background: url('assets/stake_image2.png') no-repeat;
+  background-size: contain;
+}
+
+.image3 {
+  background: url('assets/stake_image3.png') no-repeat;
+  background-size: contain;
+}
+
+.image4 {
+  background: url('assets/stake_image4.png') no-repeat;
   background-size: contain;
 }
 
@@ -650,11 +692,14 @@ a {
   width: 1vw;
   height: 0;
   padding-bottom: 1vw;
-  border-radius: 4px;
+  border-radius: 8px;
   margin-right: 0.5vw;
+  
 
   background: url('assets/check_mark.png') no-repeat;
   background-size: contain;
+
+  border: 1px solid #E94A61;
 
   transition: all 0.2s ease-in;
 }
@@ -690,6 +735,198 @@ a {
   text-decoration: underline;
   cursor: pointer;
 }
+
+/* LOGIN */
+
+.container_login {
+  position: absolute;
+  width: 100%;
+  height: calc(100vh - 6vw);
+
+  background-color: #FFEFF1;
+
+  clip-path: polygon(0 0, 100% 82.5vw, 100% 100%, 0 100%);
+}
+
+.login_display {
+  position: relative;
+  width:75%;
+  height: 28vw;
+  margin: 7vw 12.5% 0 12.5%;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.login_image {
+  width: 60vh;
+  height: 27.5vw;
+  background: url('assets/login_triplebubble.png') no-repeat;
+  background-size: contain;
+}
+
+.login_form {
+  width: 31vw;
+  height: 25vw;
+
+  background-color: #FFFFFF;
+  border: 1px solid #FFFFFF;
+  box-shadow: 0px 0px 20px 2px rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.login_title {
+  font-family: 'Soleil', sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1.7vw;
+}
+
+.login_label {
+  font-family: 'Soleil', sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 0.85vw;
+  margin: 0;
+}
+
+.input_display {
+  width: 24vw;
+  height: 2.5vw;
+  margin-bottom: 1vw;
+  border-bottom: 1px solid #FCADBD;
+  
+  display: flex;
+  align-items: center;
+}
+
+.input_img {
+  width: 1.1vw;
+  height: 0;
+  padding-bottom: 1.1vw;
+  margin: 0 0.75vw
+}
+
+.username {
+  background: url('assets/user.png') no-repeat;
+  background-size: contain;
+}
+
+.password {
+  background: url('assets/password.png') no-repeat;
+  background-size: contain;
+}
+
+.login_input {
+  width: 21vw;
+  height: 2vw;
+  border: none;
+
+  font-family: 'Soleil', sans-serif;
+  font-weight: 300;
+  font-size: 0.75vw;
+}
+
+.login_input::placeholder {
+  font-family:'Soleil', sans-serif;
+  font-style: italic;
+  font-weight: lighter;
+  font-size: 0.75vw;
+ 
+
+  color: #ACACAC;
+}
+
+.login_input:focus {
+  outline: none;
+}
+
+.password_input {
+  width: 19vw;
+}
+
+.alert {
+  position: absolute;
+  font-size: 0.75vw;
+  font-family: 'Soleil', sans-serif;
+  color: #E94A61;
+  margin-top: 0.3vw;
+  margin-left: 19%;
+}
+
+.connection_button {
+  width: 24vw;
+  height: 2.3vw;
+  margin-top: 1vw;
+  background-color: #FCADBD;
+  border: 1px solid #FCADBD;
+  border-radius: 4px;
+
+  font-family: 'Soleil', sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 1vw;
+
+  transition: all 0.2s ease-in;
+  cursor: pointer
+
+}
+
+.connection_button:hover {
+  background-color: #E94A61;
+  border-color: #E94A61;
+  color: white;
+}
+
+.login_details {
+  width: 24vw;
+  height: 2vw;
+  margin-top: 1vw;
+  height: auto;
+
+  display:flex;
+  flex-direction: row;
+}
+
+.login_details_left {
+  width: 50%;
+  align-items: right;
+}
+
+.login_details_right {
+  width: 50%;
+  text-align: right;
+}
+
+.forget_password {
+  color: #E94A61;
+  font-family: 'Soleil', sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 0.85vw;
+  
+}
+
+.forget_password:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.login_new {
+  font-family: 'Soleil', sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 0.85vw;  
+}
+
+
+
 
 
 

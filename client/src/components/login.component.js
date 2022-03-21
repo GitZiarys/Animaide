@@ -8,12 +8,11 @@ const required = value => {
   if (!value) {
     return (
       <div className="alert alert-danger" role="alert">
-        This field is required!
+        Ce champ est requis !
       </div>
     );
   }
 };
-
 
 class LoginComp extends Component {
     
@@ -78,11 +77,6 @@ class LoginComp extends Component {
     return (
       <div className="col-md-12">
         <div className="card card-container">
-          <img
-            src="//ssl.gstatic.com/accounts/ui/avatar_2x.png"
-            alt="profile-img"
-            className="profile-img-card"
-          />
           <Form
             onSubmit={this.handleLogin}
             ref={c => {
@@ -90,36 +84,46 @@ class LoginComp extends Component {
             }}
           >
             <div className="form-group">
-              <label htmlFor="username">Pseudo</label>
-              <Input
-                type="text"
-                className="form-control"
-                name="username"
-                value={this.state.username}
-                onChange={this.onChangeUsername}
-                validations={[required]}
-              />
+              <label htmlFor="username" className="login_label" >Nom d'utilisateur</label>
+              <div className="input_display">
+                <div className="input_img username"></div>
+                <Input
+                  type="text"
+                  className="login_input"
+                  name="username"
+                  placeholder="exemple : CloudMaster"
+                  value={this.state.username}
+                  onChange={this.onChangeUsername}
+                  validations={[required]}
+                />
+              </div>
             </div>
             <div className="form-group">
-              <label htmlFor="password">Mot de passe</label>
-              <Input
-                type="password"
-                className="form-control"
-                name="password"
-                value={this.state.password}
-                onChange={this.onChangePassword}
-                validations={[required]}
-              />
+              <label htmlFor="password" className="login_label">Mot de passe</label>
+              <div className="input_display">
+                <div className="input_img password"></div>
+                <Input
+                  type="password"
+                  className="login_input password_input "
+                  id="password_input"
+                  name="password"
+                  placeholder="exemple : azerty"
+                  value={this.state.password}
+                  onChange={this.onChangePassword}
+                  validations={[required]}
+                  />
+                  <input type="checkbox" id="leak_password" />
+              </div>
             </div>
             <div className="form-group">
               <button
-                className="btn btn-primary btn-block"
+                className="connection_button"
                 disabled={this.state.loading}
               >
                 {this.state.loading && (
                   <span className="spinner-border spinner-border-sm"></span>
                 )}
-                <span>Connexion</span>
+                <span>Se connecter</span>
               </button>
             </div>
             {this.state.message && (
@@ -138,9 +142,19 @@ class LoginComp extends Component {
           </Form>
         </div>
       </div>
+      
     );
   }
+
+  LeakPassword() {
+    var element = document.getElementsByClassName('password_input');
+    console.log(element)
+  }
+
 }
+
+
+
 
 function WithNavigate(props) {
     let navigate = useNavigate();
@@ -148,3 +162,4 @@ function WithNavigate(props) {
 }
 
 export default WithNavigate;
+
