@@ -481,6 +481,8 @@ a {
   font-style: normal;
   font-weight: 400;
   font-size: 2.5vw;
+
+  /* text-decoration: underline #E94A61; */
 }
 
 .stake_display {
