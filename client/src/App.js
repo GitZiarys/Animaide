@@ -10,21 +10,41 @@ import AnimaideStake from "./components/animaide_stake";
 import AnimaideNewsletter from "./components/animaide_newsletter";
 
 import Footer from "./components/footer";
+import { Route, Routes } from "react-router-dom";
+import Login from "./components/login";
+import WithNavigate from "./components/login.component";
 
 const App = () => {
 
   return (
     <div className="App">
-      <Header />
+      <Routes>
+        <Route path="/" element={<>
+          <Header />
+
 
       <AnimaideShort />
       <AssociationsDisplay />
       <AnimaideEngage />
       <AnimaideRecentMissions />
+
       <AnimaideStake />
       <AnimaideNewsletter />
 
-      <Footer />
+      
+
+      <Footer /> </>} />
+      <Route path="/login" element={<>
+          <Header />
+          <WithNavigate />
+          <Login />
+
+      
+
+
+      <Footer /> </>} />
+      
+      </Routes>
       </div> 
       );
 }

@@ -2,7 +2,7 @@ import React from "react";
 import "../App";
 import "../App.css";
 import AuthService from "../services/auth.service";
-import Login from "../components/login.component";
+import Login from "../components/login";
 import Register from "../components/register.component";
 import Profile from "../components/profile.component";
 import BoardUser from "../components/board-user.component";
