@@ -1,6 +1,11 @@
 import React from "react";
 import axios from "axios";
+import { Routes, Route, Link } from "react-router-dom";
 import "../App.css";
+
+const Header_button = {
+  display: "inline-block",
+};
 
 class AnimaideRecentMissions extends React.Component {
 
@@ -36,12 +41,13 @@ class AnimaideRecentMissions extends React.Component {
   displayMission = (posts) => {
     if (!posts.length) return null;
 
-    return posts.sort((a, b) => b._id.localeCompare(a._id)).slice(0, 4).map((post, index) => (
-      <div className="result2" key={index}>
-        <img src={post.image} alt="mission" />
-        <h3>{post.title}</h3>
-        <p>{post.body}</p>
-      </div>
+    return posts.sort((a, b) => b._id.localeCompare(a._id)).slice(0, 5).map((post, index) => (
+        <div className="recentmission_display" key={index}>
+          <img src={post.image} alt="mission" className="recentmission_image"/>
+          <h3 className="recentmission_title">{post.title}</h3>
+          <p className="recentmission_description">{post.body}</p>
+          <Link className="recentmission_button" to={"/register"} style={Header_button}>Découvrir la mission</Link>
+        </div>
     ));
 
     
@@ -51,8 +57,9 @@ class AnimaideRecentMissions extends React.Component {
 
  return (
   <section className="container_recentmissions">
-  <div className="recent">{this.displayMission(this.state.posts)}</div>
-  <div>Plus de missions blablabla</div>
+    <h2 className="recentmissions_title">Découvrir les missions récentes</h2>
+    <div className="recentmission_container">{this.displayMission(this.state.posts)}</div>
+    <Link className="recentmission_allmisions" to={"/register"} style={Header_button}>Découvrir toutes les autres missions</Link>
 </section>
  )
 }

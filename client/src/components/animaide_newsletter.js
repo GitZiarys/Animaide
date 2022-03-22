@@ -17,7 +17,7 @@ const AnimaideNewsletter = () => {
                         <label for="newsletter_check" className="newsletter_check_label">
                             <input className="newsletter_check" id="newsletter_check" type="checkbox" required></input>
                             <div className="newsletter_checkbox_check"></div>
-                            Accepter nos<a className="newsletter_TC" href="">Termes et conditions</a>
+                            Accepter nos<a className="newsletter_TC" href="/termsconditions">Termes et conditions</a>
                         </label>
                         </form>
                     </div>
