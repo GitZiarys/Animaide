@@ -42,7 +42,7 @@ class Header extends React.Component{
             <Link className="header_logo" to={"/"}></Link>
             <a className="header_link">Nos missions</a>
             <a className="header_link">Les associations</a>
-            <a className="header_link">Pourquoi Animaide ?</a>
+            <Link className="header_link" to={"/animaide"} style={Header_button}> Pourquoi Animaide ?</Link>
           </div>
           <div className="header_right">
           {showAdminBoard && (

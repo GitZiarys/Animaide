@@ -191,6 +191,26 @@ a {
   gap: 1vw;
 }
 
+.waiting {
+  text-decoration: none;
+  font-family: 'Soleil', sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 0.85vw;
+  line-height: 1.6vw;
+
+  color: transparent;
+
+  border-bottom: 1px solid #FFEFF1;
+  transition: all 0.2s ease-in;
+
+  cursor:default;
+}
+
+.waiting:hover {
+  border-bottom: 1px solid transparent;
+}
+
 .footer_icon {
   width: 2.5vw;
   height: 2.5vw;
@@ -364,6 +384,7 @@ a {
 }
 
 .animaide_engage_title {
+  width: 100%;
   margin: 0;
   text-align: center;
 
@@ -372,6 +393,11 @@ a {
   font-style: normal;
   font-weight: 400;
   line-height: 3.2vw;
+
+  background: url('assets/decoration2.png') no-repeat;
+  background-size: 2.5%;
+  background-position-x: 68.5%;
+  padding-left: 2.5vw;
 }
 
 .container_animaide_3engages {
@@ -587,6 +613,11 @@ a {
   font-style: normal;
   font-weight: 400;
   font-size: 2.5vw;
+
+  background: url('assets/decoration1.png') no-repeat;
+  background-size: 2%;
+  background-position-x: 37%;
+  padding-left: 2.5vw;
 
   /* text-decoration: underline #E94A61; */
 }
@@ -1174,6 +1205,114 @@ a {
 .last_info {
   padding-bottom: 7vw;
 }
+
+/* Pourquoi Animaide */ 
+
+.container_animaide {
+  width: 100%;
+  height: 100%;
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.animaide_title {
+  font-family: 'Soleil', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 2.5vw;
+}
+
+.animaide_header_img {
+  width: 100%;
+  height:28vw;
+
+  background: url('assets/animaide_header_img.png') no-repeat;
+  background-size: contain;
+}
+
+.animaide_first {
+  width: 67vw;
+  height: 15vw;
+  margin-top: 3vw;
+
+  display: flex;
+}
+
+.animaide_first_img {
+  width: 50%;
+
+  background: url('assets/animaide_logo_only.png') no-repeat;
+  background-size: 40%;
+  background-position: center;
+}
+
+.animaide_first_description {
+  width: 47.5%;
+
+  background: url('assets/decoration2.png') no-repeat;
+  background-size: 7.5%;
+  background-position-x: 85%;
+  background-position-y: 5%;
+}
+
+.animaide_first_title {
+  margin:1vw 0 1vw 0;
+  font-family: 'Soleil', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 2.5vw;
+
+  color:#E891A2;
+}
+
+.animaide_first_subdescription {
+  margin:0;
+  font-family: 'Soleil', sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 1vw;
+}
+
+.animaide_second {
+  width: 67vw;
+  height: 23vw;
+  margin-top: 3vw;
+
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.animaide_second_description {
+  width: 50%;
+
+  background: url('assets/decoration1.png') no-repeat;
+  background-size: 5%;
+  background-position-x: 1%;
+  background-position-y: 5%;
+  padding-left: 2.5vw;
+}
+
+.animaide_second_img {
+  width: 50%;
+  height: 23vw;
+
+  background: url('assets/animaide_second_img.png') no-repeat;
+  background-size: 50%;
+  background-position: center;
+}
+
+.animaide_footer {
+  width: 63vw;
+  height: 23vw;
+  margin: 5vw 0;
+  border-radius: 11px;
+
+  background: url('assets/animaide_footer.png') no-repeat;
+  background-size: contain;
+}
+
+
 
 
 

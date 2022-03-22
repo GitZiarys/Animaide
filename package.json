@@ -33,6 +33,6 @@
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^6.2.7",
     "morgan": "^1.10.0",
-    "react-router-dom": "^6.2.0",
+    "react-router-dom": "^6.2.0"
   }
 }

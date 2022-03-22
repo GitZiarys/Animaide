@@ -178,7 +178,7 @@ class Register extends Component {
                     </div>
                 </div>
                 <div className="form-group">
-                  <button className="connection_button">Inscription</button>
+                  <button className="connection_button">Créer un compte</button>
                 </div>
               </div>
             )}

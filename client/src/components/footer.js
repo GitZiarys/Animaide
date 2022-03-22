@@ -19,9 +19,9 @@ const Footer = () => {
               </div>
               <div className="footer_info">
                   <h2 className="footer_title">À propos</h2>
-                  <a className="footer_link">Notre cause</a>
-                  <a className="footer_link">Comment ça fonctionne ?</a>
+                  <Link className="footer_link" to={"/animaide"} style={Header_button}> Pourquoi Animaide ?</Link>
                   <Link className="footer_link" to={"/termsconditions"} style={Header_button}> Termes et Conditions</Link>
+                  <a className="footer_link waiting"> Easter Egg</a>
               </div>
           </div>
           <a className="footer footer_center" href="./"></a>

@@ -8,6 +8,7 @@ import Acceuil from "./pages/Acceuil";
 import Connexion from "./pages/connexion";
 import Inscription from "./pages/inscription";
 import TermsConditions from "./pages/terms_and_conditions";
+import Animaide from "./pages/Animaide";
 
 import {Route, Routes } from "react-router-dom";
 
@@ -21,7 +22,8 @@ const App = () => {
           <Route path="/login" element={<><Connexion /></>} />
           <Route path="/register" element={<><Inscription /></>} />
           <Route path="/termsconditions" element={<><TermsConditions /></>} />
-        </Routes>
+          <Route path="/animaide" element={<><Animaide /></>} />
+          </Routes>
       </RestoreScroll>
       </div> 
       );
