@@ -110,11 +110,6 @@ class Register extends Component {
     return (
       <div className="col-md-12">
         <div className="card card-container">
-          <img
-            src="//ssl.gstatic.com/accounts/ui/avatar_2x.png"
-            alt="profile-img"
-            className="profile-img-card"
-          />
           <Form
             onSubmit={this.handleRegister}
             ref={c => {
@@ -124,40 +119,66 @@ class Register extends Component {
             {!this.state.successful && (
               <div>
                 <div className="form-group">
-                  <label htmlFor="username">Pseudo</label>
-                  <Input
-                    type="text"
-                    className="form-control"
-                    name="username"
-                    value={this.state.username}
-                    onChange={this.onChangeUsername}
-                    validations={[required, vusername]}
-                  />
+                  <label htmlFor="username" className="login_label">Nom d'utilisateur</label>
+                  <div className="input_display">
+                  <div className="input_img username"></div>
+                    <Input
+                      type="text"
+                      className="login_input"
+                      placeholder="exemple : CloudMaster"
+                      name="username"
+                      value={this.state.username}
+                      onChange={this.onChangeUsername}
+                      validations={[required, vusername]}
+                    />
+                  </div>
                 </div>
                 <div className="form-group">
-                  <label htmlFor="email">Email</label>
-                  <Input
-                    type="text"
-                    className="form-control"
-                    name="email"
-                    value={this.state.email}
-                    onChange={this.onChangeEmail}
-                    validations={[required, email]}
+                  <label htmlFor="email" className="login_label">Email</label>
+                  <div className="input_display">
+                  <div className="input_img email"></div>
+                    <Input
+                      type="text"
+                      className="login_input"
+                      placeholder="exemple : exemple@gmail.com"
+                      name="email"
+                      value={this.state.email}
+                      onChange={this.onChangeEmail}
+                      validations={[required, email]}
                   />
+                  </div>
                 </div>
                 <div className="form-group">
-                  <label htmlFor="password">Mot de passe</label>
-                  <Input
-                    type="password"
-                    className="form-control"
-                    name="password"
-                    value={this.state.password}
-                    onChange={this.onChangePassword}
-                    validations={[required, vpassword]}
-                  />
+                  <label htmlFor="password" className="login_label">Mot de passe</label>
+                  <div className="input_display ">
+                  <div className="input_img password"></div>
+                    <Input
+                      type="password"
+                      className="login_input password_input "
+                      placeholder="exemple : azerty"
+                      name="password"
+                      value={this.state.password}
+                      onChange={this.onChangePassword}
+                      validations={[required, vpassword]}
+                    />
+                  </div>
+                </div>
+                <div className="container_password_requirement">
+                    <div className="password_requirement">
+                        <div className="password_status caps"></div>
+                        <p className="password_requirement_text">Au moins 1 majuscule (ABC)</p>
+                    </div>
+                    <div className="password_requirement">
+                        <div className="password_status number"></div>
+                        <p className="password_requirement_text">Au moins 1 chiffre (0123)</p>
+                    </div>
+                    <div className="password_requirement">
+                        <div className="password_status lenght"></div>
+                        <p className="password_requirement_text">Au moins 8 caractères</p>
+                    </div>
                 </div>
                 <div className="form-group">
-                  <button className="btn btn-primary btn-block">Inscription</button>
+                  <button className="connection_button">Inscription</button>
                 </div>
               </div>
             )}
