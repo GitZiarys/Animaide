@@ -40,7 +40,7 @@ class Header extends React.Component{
       <section className="container_header">
           <div className="header_left">
             <Link className="header_logo" to={"/"}></Link>
-            <a className="header_link">Nos missions</a>
+            <Link className="header_link" to={"/missions"}>Nos missions</Link>
             <a className="header_link">Les associations</a>
             <a className="header_link">Pourquoi Animaide ?</a>
           </div>

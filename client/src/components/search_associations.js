@@ -3,28 +3,23 @@ import axios from "axios";
 import "../App.css";
 import { Link } from "react-router-dom";
 
-class SearchMissions extends React.Component {
+class SearchAssociations extends React.Component {
 
   state = {
     _id: "",
-    title: "",
-    body1: "",
-    body2: "",
-    slug: "",
-    tag: "",
+    assoTitle: "",
+    assoBody: "",
+    assoContact: "",
+    assoslug: "",
+    assoFB: "",
     localisation: "",
-    localisationTag: "",
-    image: "",
+    assoImg: "",
     posts: [],
-    isToggleOn: true,
-    isToggleOn2: true,
-    isToggleOn3: true,
     search: "",
-    search2: "",
   };
 
   componentDidMount = () => {
-    this.getMission();
+    this.getAssociation();
   };
 
   handleChange = ({ target }) => {
@@ -35,9 +30,9 @@ class SearchMissions extends React.Component {
     });
   };
 
-  getMission = () => {
+  getAssociation = () => {
     axios
-      .get("/api")
+      .get("/api/associations")
       .then((response) => {
         const data = response.data;
         this.setState({ posts: data });
@@ -48,21 +43,16 @@ class SearchMissions extends React.Component {
   };
 
 
-      
-
-
-
-
-  displayMission = (posts) => {
+  displayAssociation = (posts) => {
     const dataSearch = this.state.search;
     if (!posts.length) return null;
 
-    return posts.sort((a, b) => b._id.localeCompare(a._id)).filter((postTag) => postTag.title.toLowerCase().includes(dataSearch)).map((post, index) => (
+    return posts.sort((a, b) => b.assoTitle.localeCompare(a.assoTitle)).filter((postTag) => postTag.assoTitle.toLowerCase().includes(dataSearch)).map((post, index) => (
       <div className="result2" key={index}>
-        {/* <img src={post.image} alt="mission" /> */}
-        <h3>{post.title}</h3>
-        <p>{post.body1}</p>
-        <Link to={"/missions/"+post.slug}>Voir mission</Link>
+        <img src={post.assoImg} alt="association" />
+        <h3>{post.assoTitle}</h3>
+        <p>{post.assoBody}</p>
+        <Link to={"/associations/"+post.assoslug}>Voir association</Link>
       </div>
     ));
 
@@ -84,7 +74,7 @@ class SearchMissions extends React.Component {
     onChange={this.handleChange}
   />
 </div>
-  <div className="recent">{this.displayMission(this.state.posts)}</div>
+<div className="recent">{this.displayAssociation(this.state.posts)}</div>
 </section>
  )
 }
@@ -92,4 +82,4 @@ class SearchMissions extends React.Component {
 }
 
 
-export default SearchMissions;
+export default SearchAssociations;

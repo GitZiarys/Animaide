@@ -12,7 +12,9 @@ class AnimaideRecentMissions extends React.Component {
   state = {
     _id: "",
     title: "",
+    slug: "",
     body1: "",
+    body2: "",
     tag: "",
     localisation: "",
     localisationTag: "",
@@ -45,8 +47,8 @@ class AnimaideRecentMissions extends React.Component {
         <div className="recentmission_display" key={index}>
           <img src={post.image} alt="mission" className="recentmission_image"/>
           <h3 className="recentmission_title">{post.title}</h3>
-          <p className="recentmission_description">{post.body}</p>
-          <Link className="recentmission_button" to={"/register"} style={Header_button}>Découvrir la mission</Link>
+          <p className="recentmission_description">{post.body2}</p>
+          <Link className="recentmission_button" to={"/missions/"+post.slug} style={Header_button}>Découvrir la mission</Link>
         </div>
     ));
 
@@ -59,7 +61,7 @@ class AnimaideRecentMissions extends React.Component {
   <section className="container_recentmissions">
     <h2 className="recentmissions_title">Découvrir les missions récentes</h2>
     <div className="recentmission_container">{this.displayMission(this.state.posts)}</div>
-    <Link className="recentmission_allmisions" to={"/register"} style={Header_button}>Découvrir toutes les autres missions</Link>
+    <Link className="recentmission_allmisions" to={"/missions"} style={Header_button}>Découvrir toutes les autres missions</Link>
 </section>
  )
 }

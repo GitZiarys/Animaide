@@ -2,17 +2,9 @@ import React, { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router";
 
  
-export default function MissionPage() {
+export default function AssociationPage() {
  const [form, setForm] = useState({
-   title: "",
-   body1: "",
-   body2: "",
    localisation: "",
-   link: "",
-   image: "",
-   image2: "",
-   duree: "",
-   prerequis: "",
    assoImg: "",
    assoTitle: "",
    assoBody: "",
@@ -24,8 +16,9 @@ export default function MissionPage() {
  
  useEffect(() => {
    async function fetchData() {
-     const slug = params.slug.toString();
-     const response = await fetch(`http://localhost:8080/api/${params.slug.toString()}`);
+     const assoslug = params.assoslug.toString();
+
+     const response = await fetch(`http://localhost:8080/api/associations/${params.assoslug.toString()}`);
  
      if (!response.ok) {
        const message = `An error has occurred: ${response.statusText}`;
@@ -35,7 +28,7 @@ export default function MissionPage() {
  
      const record = await response.json();
      if (!record) {
-       window.alert(`Mission with id ${slug} not found`);
+       window.alert(`Association with id ${assoslug} not found`);
        navigate("/");
        return;
      }
@@ -46,24 +39,17 @@ export default function MissionPage() {
    fetchData();
  
    return;
- }, [params.slug, navigate]);
+ }, [params.assoslug, navigate]);
  
 
  
  return (
      <section>
-         {/* J'ai mis toutes les infos d'une mission ici, libre à toi de les arranger comme tu le souhaites */}
+         {/* J'ai mis toutes les infos d'une association ici, libre à toi de les arranger comme tu le souhaites */}
    <div>
     
-     <h3>{form.title}</h3>
-     <p>{form.body1}</p>
-     <p>{form.body2}</p>
+
      <p>{form.localisation}</p>
-     <a href={form.link} />
-     <img alt={form.title} src={form.image}/>
-     <img alt={form.title} src={form.image2}/>
-     <p>{form.duree}</p>
-     <p>{form.prerequis}</p>
      <img alt={form.assoTitle} src={form.assoImg}/>
      <p>{form.assoTitle}</p>
      <p>{form.assoBody}</p>

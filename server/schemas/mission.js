@@ -16,7 +16,8 @@ const missionSchema = new mongoose.Schema({
     assoBody: String,
     assoContact: String,
     assoFB: String,
-    slug: String
+    slug: String,
+    assoslug: String
 
 });
 
