@@ -6,16 +6,18 @@ export default class Profile extends Component {
     super(props);
     this.state = {
       currentUser: AuthService.getCurrentUser(),
-      profileImage: "https://pbs.twimg.com/profile_images/1471784758300528642/gqq0d8ig_400x400.jpg"
+      profileImage: "",
+      username: ""
     };
   }
   getImage = () => {
     axios
-      .get("http://localhost:8080/api/test/get")
+      .get("http://localhost:8080/api/test/")
       .then((response) => {
-        const data = response.data;
+        const data = response.data
         this.setState({ profileImage: data });
-        console.log(data)
+        console.log(data);
+        console.log(this.state);
       })
       .catch(() => {
         console.log("error");
@@ -33,7 +35,8 @@ export default class Profile extends Component {
   submit = (event) => {
     event.preventDefault();
     const payload = {
-      profileImage: this.state.profileImage,
+      profileImage: "",
+      username: this.state.currentUser.username
     };
 
     axios({

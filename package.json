@@ -22,7 +22,6 @@
   },
   "homepage": "https://github.com/GitZiarys/HelpFoule#readme",
   "dependencies": {
-    "axios": "^0.26.1",
     "bcryptjs": "^2.4.3",
     "concurrently": "^7.0.0",
     "cors": "^2.8.5",
@@ -32,8 +31,6 @@
     "gsap": "^3.9.1",
     "http-proxy-middleware": "^2.0.4",
     "jsonwebtoken": "^8.5.1",
-    "mongoose": "^6.2.7",
-    "morgan": "^1.10.0",
-    "react-router-dom": "^6.2.0"
+    "mongoose": "^6.2.7"
   }
 }
