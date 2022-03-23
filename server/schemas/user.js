@@ -10,7 +10,7 @@ const userSchema = new mongoose.Schema({
         }
       ],
     lastSearch: String,
-    profileImage: String
+    profileImage: {type: String, default: 'https://i.imgur.com/Geb0OcA.png'}
 });
 
 module.exports = mongoose.model('User', userSchema, 'users');

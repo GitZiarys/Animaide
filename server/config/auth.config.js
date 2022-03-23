@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 module.exports = {
-    secret: "animaidesrt"
+    secret: process.env.SECRET
   };

@@ -19,17 +19,22 @@ const User = require("../schemas/user");
     controller.adminBoard
   );
   app.put("/test/image", (req, res) => {
-    const username = req.params.currentUser.username
-    User.findOne({ username }).then((data) => {
+    const usr = req.body.username
+    const img = req.body.profileImage
+    User.findOne({ username : usr })
+    User.findOneAndUpdate({ username : usr}, {profileImage : img})
+    .then((data) => {
       res.json(data);
+      console.log(data);
     })
     .catch((error) => {
       console.log("error: ", error);
     });
   })
-  app.get("/test/get", (req, res) => {
-    User.find({}).then((data) => {
+  app.get("/test/", (req, res) => {
+    User.findOne({ username: req.body.username }).then((data) => {
       res.json(data);
+      console.log(data)
     })
     .catch((error) => {
       console.log("error: ", error);

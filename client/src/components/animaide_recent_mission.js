@@ -7,7 +7,7 @@ class AnimaideRecentMissions extends React.Component {
   state = {
     _id: "",
     title: "",
-    body: "",
+    body1: "",
     tag: "",
     localisation: "",
     localisationTag: "",
@@ -40,7 +40,7 @@ class AnimaideRecentMissions extends React.Component {
       <div className="result2" key={index}>
         <img src={post.image} alt="mission" />
         <h3>{post.title}</h3>
-        <p>{post.body}</p>
+        <p>{post.body1}</p>
       </div>
     ));
 

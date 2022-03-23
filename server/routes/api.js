@@ -14,6 +14,12 @@ router.get("/", (req, res) => {
     });
 });
 
+router.get("/:slug", (req, res) => {
+  Mission.findOne({ slug: req.params.slug })
+    .then(mission => res.json(mission))
+    .catch(err => res.status(404).json({ nomissionfound: 'No Mission found' }));
+});
+
 router.post("/save", (req, res) => {
   const data = req.body;
 
