@@ -32,7 +32,7 @@ const Connexion = () => {
                             <Link className="forget_password" to={"/"} style={Header_button}> Mot de passe oublié</Link>
                         </div>
                     </div>
-                    <p className="login_new">Tu es nouveau ? <Link className="forget_password" to={"/"} style={Header_button}> Crée un compte</Link></p>
+                    <p className="login_new">Tu es nouveau ? <Link className="forget_password" to={"/register"} style={Header_button}> Crée un compte</Link></p>
                 </div>
             </div>
         </section>

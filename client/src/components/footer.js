@@ -1,6 +1,12 @@
 import React from "react";
 import "../App.css";
 
+import { Routes, Route, Link } from "react-router-dom";
+
+const Header_button = {
+    display: "inline-block",
+};
+
 const Footer = () => {
   return (
       <section className="container_footer">
@@ -15,10 +21,10 @@ const Footer = () => {
                   <h2 className="footer_title">À propos</h2>
                   <a className="footer_link">Notre cause</a>
                   <a className="footer_link">Comment ça fonctionne ?</a>
-                  <a className="footer_link">Termes et conditions</a>
+                  <Link className="footer_link" to={"/termsconditions"} style={Header_button}> Termes et Conditions</Link>
               </div>
           </div>
-          <div className="footer footer_center"></div>
+          <a className="footer footer_center" href="./"></a>
           <div className="footer footer_right">
               <a className="footer_icon instagram"></a>
               <a className="footer_icon twitter" href="https://www.facebook.com/Amimaide" target="_blank"></a>

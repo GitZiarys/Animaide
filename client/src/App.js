@@ -1,12 +1,16 @@
 import React from "react";
 import "./App.css";
 
+import RestoreScroll from "./scripts/RestoreScroll";
+
 
 import Acceuil from "./pages/Acceuil";
 import Connexion from "./pages/connexion";
 import Missions from "./pages/missions";
+import Inscription from "./pages/inscription";
+import TermsConditions from "./pages/terms_and_conditions";
 
-import { Route, Routes } from "react-router-dom";
+import {Route, Routes } from "react-router-dom";
 
 import WithNavigate from "./components/login.component";
 import Profile from "./components/profile.component";
@@ -18,13 +22,17 @@ const App = () => {
 
   return (
     <div className="App">
-      <Routes>
-        <Route path="/" element={<><Acceuil /></>} />
-        <Route path="/login" element={<><Connexion /></>} />
-        <Route path="/profile" element={<><Profile /></>} />
-        <Route path="/missions" element={<><Missions /></>} />
-        <Route path="/missions/:slug" element={<><MissionPage /></>} />
-      </Routes>
+      <RestoreScroll >
+        <Routes>
+          <Route path="/" element={<><Acceuil /></>} />
+          <Route path="/login" element={<><Connexion /></>} />
+          <Route path="/register" element={<><Inscription /></>} />
+          <Route path="/termsconditions" element={<><TermsConditions /></>} />
+          <Route path="/profile" element={<><Profile /></>} />
+          <Route path="/missions" element={<><Missions /></>} />
+          <Route path="/missions/:slug" element={<><MissionPage /></>} />
+        </Routes>
+      </RestoreScroll>
       </div> 
       );
 }
