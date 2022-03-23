@@ -1380,12 +1380,34 @@ a {
   text-align: center;
 }
 
+.mission_header {
+  width: 100%;
+  height: 5vw;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.mission_back_link {
+  width: 15%;
+  height: 2.5vw;
+  background: url('assets/back_arrow.png') no-repeat;
+  background-size: contain;
+  border-radius: 11px;
+  margin-left: 1vw;
+}
+
+.void {
+  width: 15%
+}
+
 .mission_title {
+  width: 70%;
   font-family: 'Soleil', sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 2.5vw;
-  margin-bottom: 0.5vw;
 }
 
 .mission_header_img {
