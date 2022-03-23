@@ -14,7 +14,6 @@ import Eg from "./pages/EG";
 
 import {Route, Routes } from "react-router-dom";
 
-import WithNavigate from "./components/login.component";
 import Profile from "./components/profile.component";
 import Page from "./pages/page";
 import MissionPage from "./components/mission_page";
@@ -30,6 +29,8 @@ const App = () => {
           <Route path="/login" element={<><Connexion /></>} />
           <Route path="/register" element={<><Inscription /></>} />
           <Route path="/termsconditions" element={<><TermsConditions /></>} />
+          <Route path="/animaide" element={<><Animaide /></>} />
+          <Route path="/eg" element={<><Eg /></>} />
           <Route path="/profile" element={<><Profile /></>} />
           <Route path="/missions" element={<><Missions /></>} />
           <Route path="/missions/:slug" element={<><Page /></>} />
