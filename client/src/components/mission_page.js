@@ -51,29 +51,41 @@ export default function MissionPage() {
 
  
  return (
-     <section>
-         {/* J'ai mis toutes les infos d'une mission ici, libre à toi de les arranger comme tu le souhaites */}
-   <div>
-    
-     <h3>{form.title}</h3>
-     <p>{form.body1}</p>
-     <p>{form.body2}</p>
-     <p>{form.localisation}</p>
-     <a href={form.link} />
-     <img alt={form.title} src={form.image}/>
-     <img alt={form.title} src={form.image2}/>
-     <p>{form.duree}</p>
-     <p>{form.prerequis}</p>
-     <img alt={form.assoTitle} src={form.assoImg}/>
-     <p>{form.assoTitle}</p>
-     <p>{form.assoBody}</p>
-     <p>{form.assoContact}</p>
-     <p>{form.assoFB}</p>
-
-
-      
-   </div>
-
-   </section>
+    <section className="mission_page">
+    {/* J'ai mis toutes les infos d'une mission ici, libre à toi de les arranger comme tu le souhaites */}
+      <div className="container_mission">
+        <h1 className="mission_title">{form.title}</h1>
+        <img className="mission_header_img" alt={form.title} src={form.image}/>
+        <div className="mission_display">
+          <div className="mission_left">
+            <h2 className="mission_left_title">L'association</h2>
+            <img className="mission_left_img" alt={form.assoTitle} src={form.assoImg}/>
+            <div className="mission_left_contact">
+              <a className="mission_left_facebook" href={form.assoContact} target="_blank">Contacter l'association</a> 
+              <a className="mission_left_facebook_icon" href={form.assoFB} target="_blank"></a> 
+            </div>
+            <h3 className="mission_left_title">La mission</h3>
+            <p className="mission_left_subtitle">Lieu : <span id="mission_left_info">{form.localisation}</span></p>
+            <p className="mission_left_subtitle">Durée : <span id="mission_left_info">{form.duree}</span></p>
+            <p className="mission_left_subtitle">Prérequis : <span id="mission_left_info">{form.prerequis}</span></p>
+          </div>
+          <div className="mission_right">
+            <h3 className="mission_left_title">Qui sommes-nous ?</h3>
+            <p className="mission_right_txt">{form.body1}</p>
+            <img className="mission_right_img" alt={form.title} src={form.image2}/> 
+            <h3 className="mission_left_title">Descriptif de cette mission</h3>
+            <p className="mission_right_txt">{form.body2}</p>
+            <a className="mission_right_button" href={form.link} target="_blank"> Rejoindre la mission</a>       
+            <div className="mission_association">
+              <img className="mission_association_img" alt={form.assoTitle} src={form.assoImg}/>
+              <div className="mission_association_info">
+                <h4 className="mission_association_info_title" >{form.assoTitle}</h4>
+                <p className="mission_association_info_description" >{form.assoBody}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
  );
 }

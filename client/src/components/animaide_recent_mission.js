@@ -58,9 +58,12 @@ class AnimaideRecentMissions extends React.Component {
 
  return (
   <section className="container_recentmissions">
-    <h2 className="recentmissions_title">Découvrir les missions récentes</h2>
+    <div className="recentmissions_header">
+      <h2 className="recentmissions_title">Découvrir les missions récentes</h2>
+      <Link className="recentmission_allmisions" to={"/missions"} style={Header_button}>Découvrir toutes les autres missions</Link>
+    </div>
     <div className="recentmission_container">{this.displayMission(this.state.posts)}</div>
-    <Link className="recentmission_allmisions" to={"/missions"} style={Header_button}>Découvrir toutes les autres missions</Link>
+    
 </section>
  )
 }
