@@ -14,7 +14,7 @@ const Footer = () => {
               <div className="footer_info">
                   <h2 className="footer_title">Naviguation</h2>
                   <a className="footer_link" href="./">Accueil</a>
-                  <a className="footer_link">Toutes les missions</a>
+                  <Link className="footer_link" to={"/missions"} style={Header_button}> Toutes les missions</Link>
                   <a className="footer_link">Les associations</a>
               </div>
               <div className="footer_info">
