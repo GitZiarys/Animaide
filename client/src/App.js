@@ -30,7 +30,7 @@ const App = () => {
           <Route path="/termsconditions" element={<><TermsConditions /></>} />
           <Route path="/profile" element={<><Profile /></>} />
           <Route path="/missions" element={<><Missions /></>} />
-          <Route path="/missions/:slug" element={<><MissionPage /></>} />
+          <Route path="/missions/:slug" element={<><Page /></>} />
         </Routes>
       </RestoreScroll>
       </div> 

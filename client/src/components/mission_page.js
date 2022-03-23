@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router";
-import Footer from "./footer";
-import Header from "./header";
+
  
 export default function MissionPage() {
  const [form, setForm] = useState({
@@ -53,7 +52,6 @@ export default function MissionPage() {
  
  return (
      <section>
-         <Header />
          {/* J'ai mis toutes les infos d'une mission ici, libre à toi de les arranger comme tu le souhaites */}
    <div>
     
@@ -61,7 +59,7 @@ export default function MissionPage() {
      <p>{form.body1}</p>
      <p>{form.body2}</p>
      <p>{form.localisation}</p>
-     <p>{form.link}</p>
+     <a href={form.link} />
      <img alt={form.title} src={form.image}/>
      <img alt={form.title} src={form.image2}/>
      <p>{form.duree}</p>
@@ -75,7 +73,7 @@ export default function MissionPage() {
 
       
    </div>
-   <Footer />
+
    </section>
  );
 }

@@ -1,6 +1,7 @@
 import React from "react";
 import axios from "axios";
 import "../App.css";
+import { Link } from "react-router-dom";
 
 class SearchMissions extends React.Component {
 
@@ -54,6 +55,7 @@ class SearchMissions extends React.Component {
         <img src={post.image} alt="mission" />
         <h3>{post.title}</h3>
         <p>{post.body1}</p>
+        <Link to={"/missions"+"/"+post.slug}>Voir mission</Link>
       </div>
     ));
 
