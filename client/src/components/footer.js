@@ -21,7 +21,7 @@ const Footer = () => {
                   <h2 className="footer_title">À propos</h2>
                   <Link className="footer_link" to={"/animaide"} style={Header_button}> Pourquoi Animaide ?</Link>
                   <Link className="footer_link" to={"/termsconditions"} style={Header_button}> Termes et Conditions</Link>
-                  <a className="footer_link waiting"> Easter Egg</a>
+                  <Link className="footer_link waiting" to={"/eg"} style={Header_button}> Easter Egg</Link>
               </div>
           </div>
           <a className="footer footer_center" href="./"></a>
