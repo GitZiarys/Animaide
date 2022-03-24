@@ -11,30 +11,28 @@ const User = require("../schemas/user");
     );
     next();
   });
-  app.get("/test/all", controller.allAccess);
-  app.get("/test/user", [authJwt.verifyToken], controller.userBoard);
+  app.get("/user/all", controller.allAccess);
+  app.get("/user/getuser", [authJwt.verifyToken], controller.userBoard);
   app.get(
-    "/test/admin",
+    "/user/admin",
     [authJwt.verifyToken, authJwt.isAdmin],
     controller.adminBoard
   );
-  app.put("/test/image", (req, res) => {
+  app.put("/user/image", (req, res) => {
     const usr = req.body.username
     const img = req.body.profileImage
     User.findOne({ username : usr })
     User.findOneAndUpdate({ username : usr}, {profileImage : img})
     .then((data) => {
       res.json(data);
-      console.log(data);
     })
     .catch((error) => {
       console.log("error: ", error);
     });
   })
-  app.get("/test/", (req, res) => {
+  app.get("/user/", (req, res) => {
     User.findOne({ username: req.body.username }).then((data) => {
       res.json(data);
-      console.log(data)
     })
     .catch((error) => {
       console.log("error: ", error);

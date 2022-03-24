@@ -12,12 +12,10 @@ export default class Profile extends Component {
   }
   getImage = () => {
     axios
-      .get("http://localhost:8080/api/test/")
+      .get("http://34.141.5.120/api/user/")
       .then((response) => {
         const data = response.data
         this.setState({ profileImage: data });
-        console.log(data);
-        console.log(this.state);
       })
       .catch(() => {
         console.log("error");
@@ -40,7 +38,7 @@ export default class Profile extends Component {
     };
 
     axios({
-      url: "http://localhost:8080/api/test/image",
+      url: "http://34.141.5.120/api/user/image",
       method: "PUT",
       data: payload,
     })

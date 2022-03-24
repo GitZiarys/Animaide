@@ -25,18 +25,18 @@ export default function AssociationPage() {
    async function fetchData() {
      const slug = params.slug.toString();
 
-     const response = await fetch(`http://localhost:8080/api/associations/${params.slug.toString()}`);
+     const response = await fetch(`http://34.141.5.120/api/associations/${params.slug.toString()}`);
  
      if (!response.ok) {
        const message = `An error has occurred: ${response.statusText}`;
-       window.alert(message);
+       console.log(message);
        return;
      }
  
      const record = await response.json();
      if (!record) {
-       window.alert(`Association with id ${slug} not found`);
-       navigate("/");
+       console.log(`Association with id ${slug} not found`);
+       navigate("/associations");
        return;
      }
  
@@ -52,7 +52,6 @@ export default function AssociationPage() {
  
  return (
   <section>
-      {/* J'ai mis toutes les infos d'une association ici, libre à toi de les arranger comme tu le souhaites */}
     <div>
       <img className="association_header" alt={form.title} src={form.image1}/>
       <Link className="association_back_link" to={"/associations"} style={Header_button}></Link>

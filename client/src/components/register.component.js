@@ -165,16 +165,8 @@ class Register extends Component {
                 </div>
                 <div className="container_password_requirement">
                     <div className="password_requirement">
-                        <div className="password_status caps"></div>
-                        <p className="password_requirement_text">Au moins 1 majuscule (ABC)</p>
-                    </div>
-                    <div className="password_requirement">
-                        <div className="password_status number"></div>
-                        <p className="password_requirement_text">Au moins 1 chiffre (0123)</p>
-                    </div>
-                    <div className="password_requirement">
                         <div className="password_status lenght"></div>
-                        <p className="password_requirement_text">Au moins 8 caractères</p>
+                        <p className="password_requirement_text">Le mot de passe doit contenir au moins 8 caractères</p>
                     </div>
                 </div>
                 <div className="form-group">

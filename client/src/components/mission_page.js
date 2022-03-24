@@ -30,18 +30,18 @@ export default function MissionPage() {
  useEffect(() => {
    async function fetchData() {
      const slug = params.slug.toString();
-     const response = await fetch(`http://localhost:8080/api/${params.slug.toString()}`);
+     const response = await fetch(`http://34.141.5.120/api/${params.slug.toString()}`);
  
      if (!response.ok) {
        const message = `An error has occurred: ${response.statusText}`;
-       window.alert(message);
+       console.log(message);
        return;
      }
  
      const record = await response.json();
      if (!record) {
-       window.alert(`Mission with id ${slug} not found`);
-       navigate("/");
+       console.log(`Mission with id ${slug} not found`);
+       navigate("/missions");
        return;
      }
  
@@ -57,7 +57,6 @@ export default function MissionPage() {
  
  return (
     <section className="mission_page">
-    {/* J'ai mis toutes les infos d'une mission ici, libre à toi de les arranger comme tu le souhaites */}
       <div className="container_mission">
         <div className="mission_header">
           <Link className="mission_back_link" to={"/missions"} style={Header_button}></Link>

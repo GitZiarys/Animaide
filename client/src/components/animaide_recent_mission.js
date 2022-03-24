@@ -1,6 +1,6 @@
 import React from "react";
 import axios from "axios";
-import { Routes, Route, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "../App.css";
 
 const Header_button = {
@@ -28,7 +28,7 @@ class AnimaideRecentMissions extends React.Component {
 
   getMission = () => {
     axios
-      .get("/api")
+      .get("http://34.141.5.120/api")
       .then((response) => {
         const data = response.data;
         this.setState({ posts: data });
@@ -47,7 +47,7 @@ class AnimaideRecentMissions extends React.Component {
           <img src={post.image} alt="mission" className="recentmission_image"/>
           <h3 className="recentmission_title">{post.title}</h3>
           <p className="recentmission_description">{post.body2}</p>
-          <Link className="recentmission_button" to={"/missions"+"/"+post.slug} style={Header_button}>Découvrir la mission</Link>
+          <Link className="recentmission_button" to={"/missions/"+post.slug} style={Header_button}>Découvrir la mission</Link>
         </div>
     ));
 

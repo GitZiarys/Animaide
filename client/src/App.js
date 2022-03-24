@@ -16,7 +16,6 @@ import {Route, Routes } from "react-router-dom";
 
 import Profile from "./components/profile.component";
 import Page from "./pages/page";
-import MissionPage from "./components/mission_page";
 import Associations from "./pages/associations";
 import PageAssoc from "./pages/pageassoc";
 

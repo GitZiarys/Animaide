@@ -4,7 +4,6 @@ import "../App.css";
 import AuthService from "../services/auth.service";
 import Login from "../components/login";
 import Register from "../components/register.component";
-import Profile from "../components/profile.component";
 import BoardUser from "../components/board-user.component";
 import BoardAdmin from "../components/board-admin.component";
 import { Routes, Route, Link } from "react-router-dom";
@@ -53,7 +52,7 @@ class Header extends React.Component{
 
           {currentUser ? (
             <div>
-              <Link to={"/profile"} style={Header_button}>{currentUser.username} </Link>
+              <p className="header_user" style={Header_button}>Salut, {currentUser.username} ! </p>
 
               <a
                 className="header_button connect"
@@ -79,7 +78,6 @@ class Header extends React.Component{
           <Routes>
             <Route exact path="/login" element={<Login />} />
             <Route exact path="/register" element={<Register />} />
-            <Route exact path="/profile" element={<Profile />} />
             <Route path="/user" element={<BoardUser />} />
             <Route path="/admin" element={<BoardAdmin />} />
           </Routes>

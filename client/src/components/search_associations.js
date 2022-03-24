@@ -8,7 +8,6 @@ const Header_button = {
 };
 
 class SearchAssociations extends React.Component {
-
   state = {
     _id: "",
     title: "",
@@ -39,7 +38,7 @@ class SearchAssociations extends React.Component {
 
   getAssociation = () => {
     axios
-      .get("/api/associations")
+      .get("http://34.141.5.120/api/associations")
       .then((response) => {
         const data = response.data;
         this.setState({ posts: data });
@@ -49,50 +48,71 @@ class SearchAssociations extends React.Component {
       });
   };
 
-
   displayAssociation = (posts) => {
     const dataSearch = this.state.search;
     if (!posts.length) return null;
 
-    return posts.sort((a, b) => b.title.localeCompare(a.title)).filter((postTag) => postTag.title.toLowerCase().includes(dataSearch)).map((post, index) => (
-      <div className="result2" key={index}>
-        <Link className="association_card" to={"/associations/"+post.slug} style={Header_button}>
-          <img className="association_card_img" src={post.logo} alt={post.title} />
-        </Link>
-      </div>
-    ));
-
-    
+    return posts
+      .sort((a, b) => b.title.localeCompare(a.title))
+      .filter((postTag) => postTag.title.toLowerCase().includes(dataSearch))
+      .map((post, index) => (
+        <div className="result2" key={index}>
+          <Link
+            className="association_card"
+            to={"/associations/" + post.slug}
+            style={Header_button}
+          >
+            <img
+              className="association_card_img"
+              src={post.logo}
+              alt={post.title}
+            />
+          </Link>
+        </div>
+      ));
   };
 
   render() {
-
- return (
-  <section className="container_allassociations">
-    <div className="allassociations_first">
-      <div className="allassociations_first_img"></div>
-      <div className="allassociations_first_description">
-        <h2 className="allassociations_first_title">Les Associations</h2>
-        <p className="allassociations_first_subdescription">Sensibilisation, responsabilisation, engagements, actions et luttes en faveur de la défense des animaux. Nous te proposons des associations en faveur protection animale.</p>
-      </div>
-    </div>
-    <div className="allassociations_second">
-      <div className="allassociations_second_img"></div>
-      <div className="allassociations_second_description">
-        <h2 className="allassociations_first_title">Quelles sont leurs missions ?</h2>
-        <p className="allassociations_first_subdescription">Lutter contre les abandons, contre l’expérimentation animale et les trafics d’animaux, sensibiliser l’opinion, faire évoluer les lois et le statut de l’animal. L'action de la Fondation ne se limite pas aux animaux abandonnés et au territoire français. Notre lutte s'impose partout où les animaux souffrent et ont besoin de reconnaissance.</p>
-      </div>
-    </div>
-    <h2 className="allassociations_display_title">Découvre toutes les associations</h2>
-    <div className="allassociations_display">
-      <div className="allassociations_allcards">{this.displayAssociation(this.state.posts)}</div>
-    </div>
-
-</section>
- )
+    return (
+      <section className="container_allassociations">
+        <div className="allassociations_first">
+          <div className="allassociations_first_img"></div>
+          <div className="allassociations_first_description">
+            <h2 className="allassociations_first_title">Les Associations</h2>
+            <p className="allassociations_first_subdescription">
+              Sensibilisation, responsabilisation, engagements, actions et
+              luttes en faveur de la défense des animaux. Nous te proposons des
+              associations en faveur protection animale.
+            </p>
+          </div>
+        </div>
+        <div className="allassociations_second">
+          <div className="allassociations_second_img"></div>
+          <div className="allassociations_second_description">
+            <h2 className="allassociations_first_title">
+              Quelles sont leurs missions ?
+            </h2>
+            <p className="allassociations_first_subdescription">
+              Lutter contre les abandons, contre l’expérimentation animale et
+              les trafics d’animaux, sensibiliser l’opinion, faire évoluer les
+              lois et le statut de l’animal. L'action de la Fondation ne se
+              limite pas aux animaux abandonnés et au territoire français. Notre
+              lutte s'impose partout où les animaux souffrent et ont besoin de
+              reconnaissance.
+            </p>
+          </div>
+        </div>
+        <h2 className="allassociations_display_title">
+          Découvre toutes les associations
+        </h2>
+        <div className="allassociations_display">
+          <div className="allassociations_allcards">
+            {this.displayAssociation(this.state.posts)}
+          </div>
+        </div>
+      </section>
+    );
+  }
 }
-
-}
-
 
 export default SearchAssociations;

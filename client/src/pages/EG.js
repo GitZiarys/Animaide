@@ -4,8 +4,6 @@ import "../App.css";
 import Header from "../components/header";
 import Footer from "../components/footer";
 
-import { Routes, Route, Link } from "react-router-dom";
-
 const Header_button = {
     display: "inline-block",
 };

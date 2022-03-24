@@ -32,7 +32,7 @@ exports.signup = (req, res) => {
               res.status(500).send({ message: err });
               return;
             }
-            res.send({ message: "User was registered successfully!" });
+            res.send({ message: "Vous êtes inscrit !" });
           });
         }
       );
@@ -48,7 +48,7 @@ exports.signup = (req, res) => {
             res.status(500).send({ message: err });
             return;
           }
-          res.send({ message: "User was registered successfully!" });
+          res.send({ message: "Vous êtes inscrit !" });
         });
       });
     }
@@ -65,7 +65,7 @@ exports.signin = (req, res) => {
         return;
       }
       if (!user) {
-        return res.status(404).send({ message: "User Not found." });
+        return res.status(404).send({ message: "Aucun utilisateur n'a été trouvé." });
       }
       var passwordIsValid = bcrypt.compareSync(
         req.body.password,
@@ -74,11 +74,11 @@ exports.signin = (req, res) => {
       if (!passwordIsValid) {
         return res.status(401).send({
           accessToken: null,
-          message: "Invalid Password!"
+          message: "Mot de passe invalide !"
         });
       }
       var token = jwt.sign({ id: user.id }, config.secret, {
-        expiresIn: 86400 // 24 hours
+        expiresIn: 86400
       });
       var authorities = [];
       for (let i = 0; i < user.roles.length; i++) {
