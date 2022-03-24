@@ -69,9 +69,18 @@ export default function MissionPage() {
           <div className="mission_left">
             <h2 className="mission_left_title">L'association</h2>
             <img className="mission_left_img" alt={form.assoTitle} src={form.assoImg}/>
-            <div className="mission_left_contact">
-              <a className="mission_left_facebook" href={form.assoContact} target="_blank">Site internet de l'association</a> 
-              <a className="mission_left_facebook_icon" href={form.assoFB} target="_blank"></a> 
+            <h2 className="mission_left_title">Contact</h2>
+            <div className="association_contact">
+              <a className="association_left_contact contact_web" href={form.contact} target="_blank"></a>
+              <a className="association_link" href={form.contact} target="_blank">Site Web</a>
+            </div>
+            <div className="association_contact">
+              <a className="association_left_contact contact_facebook" href={form.FB} target="_blank"></a>
+              <a className="association_link" href={form.FB} target="_blank">Voir Facebook</a> 
+            </div>
+            <div className="association_contact">
+              <div className="association_left_contact contact_localisation"></div>
+              <p className="association_localisation"> {form.localisation}</p>
             </div>
             <h3 className="mission_left_title">La mission</h3>
             <p className="mission_left_subtitle">Lieu : <span id="mission_left_info">{form.localisation}</span></p>
@@ -90,6 +99,7 @@ export default function MissionPage() {
               <div className="mission_association_info">
                 <h4 className="mission_association_info_title" >{form.assoTitle}</h4>
                 <p className="mission_association_info_description" >{form.assoBody}</p>
+                <Link className="mission_association_info_link" to={"/associations/"+form.assoslug} style={Header_button}>Voir la fiche</Link>
               </div>
             </div>
           </div>
