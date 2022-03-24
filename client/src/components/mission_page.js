@@ -70,7 +70,7 @@ export default function MissionPage() {
             <h2 className="mission_left_title">L'association</h2>
             <img className="mission_left_img" alt={form.assoTitle} src={form.assoImg}/>
             <div className="mission_left_contact">
-              <a className="mission_left_facebook" href={form.assoContact} target="_blank">Contacter l'association</a> 
+              <a className="mission_left_facebook" href={form.assoContact} target="_blank">Site internet de l'association</a> 
               <a className="mission_left_facebook_icon" href={form.assoFB} target="_blank"></a> 
             </div>
             <h3 className="mission_left_title">La mission</h3>
