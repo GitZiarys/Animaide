@@ -1,6 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router";
+import { Link } from "react-router-dom";
 
+const Header_button = {
+  display: "inline-block",
+};
  
 export default function AssociationPage() {
  const [form, setForm] = useState({
@@ -47,25 +51,40 @@ export default function AssociationPage() {
 
  
  return (
-     <section>
-         {/* J'ai mis toutes les infos d'une association ici, libre à toi de les arranger comme tu le souhaites */}
-   <div>
-    
-
-     <p>{form.localisation}</p>
-     <img alt={form.title} src={form.logo}/>
-     <p>{form.title}</p>
-     <p>{form.body1}</p>
-     <p>{form.body2}</p>
-     <img alt={form.title} src={form.image1}/>
-     <img alt={form.title} src={form.image2}/>
-     <p>{form.contact}</p>
-     <a href={form.FB}>Voir Facebook</a>
-
-
-      
-   </div>
-
+  <section>
+      {/* J'ai mis toutes les infos d'une association ici, libre à toi de les arranger comme tu le souhaites */}
+    <div>
+      <img className="association_header" alt={form.title} src={form.image1}/>
+      <Link className="association_back_link" to={"/associations"} style={Header_button}></Link>
+      <div className="container_association">
+        <div className="association_left">
+          <div className="association_left_img">
+            <img className="association_img" alt={form.title} src={form.logo}/>
+          </div>
+          <h2 className="mission_left_title">Contact</h2>
+          <div className="association_contact">
+            <a className="association_left_contact contact_web" href={form.contact} target="_blank"></a>
+            <a className="association_link" href={form.contact} target="_blank">Site Web</a>
+          </div>
+          <div className="association_contact">
+            <a className="association_left_contact contact_facebook" href={form.FB} target="_blank"></a>
+            <a className="association_link" href={form.FB} target="_blank">Voir Facebook</a> 
+          </div>
+          <div className="association_contact">
+            <div className="association_left_contact contact_localisation"></div>
+            <p className="association_localisation"> {form.localisation}</p>
+          </div>
+        </div>
+        <div className="association_right">
+          <h1 className="association_title">{form.title}</h1>
+          <h2 className="association_subtitle">L’association</h2>
+          <p className="association_description">{form.body1}</p>
+          <img className="association_right_img" alt={form.title} src={form.image2}/>
+          <h2 className="association_subtitle">Ses missions</h2>
+          <p className="association_description">{form.body2}</p>
+        </div>
+      </div>
+    </div>
    </section>
  );
 }

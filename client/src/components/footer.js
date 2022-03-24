@@ -15,7 +15,7 @@ const Footer = () => {
                   <h2 className="footer_title">Naviguation</h2>
                   <a className="footer_link" href="./">Accueil</a>
                   <Link className="footer_link" to={"/missions"} style={Header_button}> Toutes les missions</Link>
-                  <a className="footer_link">Les associations</a>
+                  <Link className="footer_link" to={"/associations"} style={Header_button}> Les associations</Link>
               </div>
               <div className="footer_info">
                   <h2 className="footer_title">À propos</h2>
@@ -26,9 +26,9 @@ const Footer = () => {
           </div>
           <a className="footer footer_center" href="./"></a>
           <div className="footer footer_right">
-              <a className="footer_icon instagram"></a>
-              <a className="footer_icon twitter" href="https://www.facebook.com/Amimaide" target="_blank"></a>
-              <a className="footer_icon facebook" href="" target="_blank"></a>
+              <a className="footer_icon instagram" href="https://instagram.com/ani.maide?utm_medium=copy_link"></a>
+              <a className="footer_icon linkedin" href=" https://www.linkedin.com/company/84119255/admin/" target="_blank"></a>
+              <a className="footer_icon facebook" href="https://www.facebook.com/Amimaide" target="_blank"></a>
               <a className="footer_icon mail"></a>
           </div>
       </section>

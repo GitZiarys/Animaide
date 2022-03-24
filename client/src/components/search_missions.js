@@ -50,11 +50,11 @@ class SearchMissions extends React.Component {
 
 
   displayMission = (posts) => {
-    const dataSearch = this.state.search;
-    const dataSearch2 = this.state.search2;
+    const dataSearch = this.state.search.toLowerCase();
+    const dataSearch2 = this.state.search2.toLowerCase();
     if (!posts.length) return null;
 
-    return posts.sort((a, b) => b._id.localeCompare(a._id)).filter((postTag) => postTag.title.includes(dataSearch)).filter((postTag2) => postTag2.body1.includes(dataSearch2)).map((post, index) => (
+    return posts.sort((a, b) => b._id.localeCompare(a._id)).filter((postTag) => postTag.title.toLowerCase().includes(dataSearch)).filter((postTag2) => postTag2.localisation.toLowerCase().includes(dataSearch2)).map((post, index) => (
       <div className="container_missioncard" key={index}>
         <div className="mission_card_left">
           <img className="mission_card_img" src={post.image} alt="mission" />
@@ -67,7 +67,7 @@ class SearchMissions extends React.Component {
           <div className="mission_card_right_footer">
             <div className="mission_card_right_footer_decoration"></div>
             <p className="mission_card_right_footer_localisation">{post.localisation}</p>
-            <Link className="mission_card_right_button" to={"/missions"+"/"+post.slug} style={Header_button}>Découvrir la mission</Link>
+            <Link className="mission_card_right_button" to={"/missions/"+post.slug} style={Header_button}>Découvrir la mission</Link>
           </div>
         </div>
       </div>
@@ -86,7 +86,7 @@ render() {
       </div>
       <div className="allmissions_input_right">
         <div className="allmissions_input_img2"></div>
-        <input className="allmissions_input_input" type="text" name="search" placeholder="Où ?" />
+        <input className="allmissions_input_input" type="text" name="search2" value={this.state.search2} onChange={this.handleChange} placeholder="Où ?" />
       </div>
     </div>
 
@@ -95,7 +95,7 @@ render() {
         <input type="text" name="search2" placeholder="Tag à rechercher" value={this.state.search2} onChange={this.handleChange}/>
       </div> */}
 
-    <div className="recent">{this.displayMission(this.state.posts)}</div>
+    <div className="allmissions_allcards">{this.displayMission(this.state.posts)}</div>
   </section>
  )
 }

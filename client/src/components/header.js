@@ -41,7 +41,7 @@ class Header extends React.Component{
           <div className="header_left">
             <Link className="header_logo" to={"/"}></Link>
             <Link className="header_link" to={"/missions"} style={Header_button}>Nos missions</Link>
-            <a className="header_link">Les associations</a>
+            <Link className="header_link" to={"/associations"} style={Header_button}>Les associations</Link>
             <Link className="header_link" to={"/animaide"} style={Header_button}> Pourquoi Animaide ?</Link>
           </div>
           <div className="header_right">
