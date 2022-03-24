@@ -37,7 +37,7 @@ class SearchMissions extends React.Component {
 
   getMission = () => {
     axios
-      .get("http://34.141.5.120/api")
+      .get("http://35.246.164.222/api")
       .then((response) => {
         const data = response.data;
         this.setState({ posts: data });

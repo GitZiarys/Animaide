@@ -12,7 +12,7 @@ export default class Profile extends Component {
   }
   getImage = () => {
     axios
-      .get("http://34.141.5.120/api/user/")
+      .get("http://35.246.164.222/api/user/")
       .then((response) => {
         const data = response.data
         this.setState({ profileImage: data });
@@ -38,7 +38,7 @@ export default class Profile extends Component {
     };
 
     axios({
-      url: "http://34.141.5.120/api/user/image",
+      url: "http://35.246.164.222/api/user/image",
       method: "PUT",
       data: payload,
     })

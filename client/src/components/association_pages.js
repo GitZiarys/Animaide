@@ -25,7 +25,7 @@ export default function AssociationPage() {
    async function fetchData() {
      const slug = params.slug.toString();
 
-     const response = await fetch(`http://34.141.5.120/api/associations/${params.slug.toString()}`);
+     const response = await fetch(`http://35.246.164.222/api/associations/${params.slug.toString()}`);
  
      if (!response.ok) {
        const message = `An error has occurred: ${response.statusText}`;
