@@ -13,14 +13,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/GitZiarys/HelpFoule.git"
+    "url": "git+https://github.com/GitZiarys/Animaide.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/GitZiarys/HelpFoule/issues"
+    "url": "https://github.com/GitZiarys/Animaide/issues"
   },
-  "homepage": "https://github.com/GitZiarys/HelpFoule#readme",
+  "homepage": "https://github.com/GitZiarys/Animaide#readme",
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "concurrently": "^7.0.0",
