@@ -12,7 +12,6 @@ class AnimaideRecentMissions extends React.Component {
   state = {
     _id: "",
     title: "",
-    slug: "",
     body1: "",
     body2: "",
     tag: "",
@@ -48,7 +47,7 @@ class AnimaideRecentMissions extends React.Component {
           <img src={post.image} alt="mission" className="recentmission_image"/>
           <h3 className="recentmission_title">{post.title}</h3>
           <p className="recentmission_description">{post.body2}</p>
-          <Link className="recentmission_button" to={"/missions/"+post.slug} style={Header_button}>Découvrir la mission</Link>
+          <Link className="recentmission_button" to={"/missions"+"/"+post.slug} style={Header_button}>Découvrir la mission</Link>
         </div>
     ));
 
