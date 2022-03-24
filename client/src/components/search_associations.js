@@ -38,7 +38,7 @@ class SearchAssociations extends React.Component {
 
   getAssociation = () => {
     axios
-      .get("http://34.141.5.120/api/associations")
+      .get("http://35.246.164.222/api/associations")
       .then((response) => {
         const data = response.data;
         this.setState({ posts: data });
