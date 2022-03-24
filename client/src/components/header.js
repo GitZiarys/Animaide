@@ -40,11 +40,9 @@ class Header extends React.Component{
       <section className="container_header">
           <div className="header_left">
             <Link className="header_logo" to={"/"}></Link>
-            <Link className="header_link" to={"/missions"} style={Header_button}>
-                Nos missions
-              </Link>
+            <Link className="header_link" to={"/missions"} style={Header_button}>Nos missions</Link>
             <a className="header_link">Les associations</a>
-            <a className="header_link">Pourquoi Animaide ?</a>
+            <Link className="header_link" to={"/animaide"} style={Header_button}> Pourquoi Animaide ?</Link>
           </div>
           <div className="header_right">
           {showAdminBoard && (
