@@ -2,22 +2,21 @@ import React from "react";
 import "../App.css";
 
 import Header from "../components/header";
-import Footer from "../components/footer";
 
 import { Routes, Route, Link } from "react-router-dom";
-import SearchMissions from "../components/search_missions";
+import SearchAssociations from "../components/search_associations";
 import Footer from "../components/footer";
 
 
 
-const Missions = () => {
+const Associations = () => {
   return (
     <section>
     <Header />
-    <SearchMissions />
+    <SearchAssociations />
     <Footer />
     </section>
   );
 }
 
-export default Missions;
+export default Associations;

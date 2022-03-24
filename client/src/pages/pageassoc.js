@@ -5,19 +5,19 @@ import Header from "../components/header";
 import Footer from "../components/footer";
 
 import { Routes, Route, Link } from "react-router-dom";
-import SearchMissions from "../components/search_missions";
-import Footer from "../components/footer";
+import AssociationPage from "../components/association_page";
 
 
 
-const Missions = () => {
+
+const PageAssoc = () => {
   return (
     <section>
     <Header />
-    <SearchMissions />
+    <AssociationPage />
     <Footer />
     </section>
   );
 }
 
-export default Missions;
+export default PageAssoc;

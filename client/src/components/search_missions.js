@@ -21,7 +21,6 @@ class SearchMissions extends React.Component {
     image: "",
     posts: [],
     search: "",
-    search2: ""
   };
 
   componentDidMount = () => {
@@ -49,9 +48,13 @@ class SearchMissions extends React.Component {
   };
 
 
+      
+
+
+
+
   displayMission = (posts) => {
     const dataSearch = this.state.search;
-    const dataSearch2 = this.state.search2;
     if (!posts.length) return null;
 
     return posts.sort((a, b) => b._id.localeCompare(a._id)).filter((postTag) => postTag.title.includes(dataSearch)).filter((postTag2) => postTag2.body1.includes(dataSearch2)).map((post, index) => (
