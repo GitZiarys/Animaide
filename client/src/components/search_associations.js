@@ -7,13 +7,16 @@ class SearchAssociations extends React.Component {
 
   state = {
     _id: "",
-    assoTitle: "",
-    assoBody: "",
-    assoContact: "",
-    assoslug: "",
-    assoFB: "",
+    title: "",
+    body1: "",
+    body2: "",
+    contact: "",
+    slug: "",
+    FB: "",
     localisation: "",
-    assoImg: "",
+    image1: "",
+    image2: "",
+    logo: "",
     posts: [],
     search: "",
   };
@@ -47,12 +50,12 @@ class SearchAssociations extends React.Component {
     const dataSearch = this.state.search;
     if (!posts.length) return null;
 
-    return posts.sort((a, b) => b.assoTitle.localeCompare(a.assoTitle)).filter((postTag) => postTag.assoTitle.toLowerCase().includes(dataSearch)).map((post, index) => (
+    return posts.sort((a, b) => b.title.localeCompare(a.title)).filter((postTag) => postTag.title.toLowerCase().includes(dataSearch)).map((post, index) => (
       <div className="result2" key={index}>
-        <img src={post.assoImg} alt="association" />
-        <h3>{post.assoTitle}</h3>
-        <p>{post.assoBody}</p>
-        <Link to={"/associations/"+post.assoslug}>Voir association</Link>
+        <img src={post.logo} alt={post.title} />
+        <h3>{post.title}</h3>
+        <p>{post.body1}</p>
+        <Link to={"/associations/"+post.slug}>Voir association</Link>
       </div>
     ));
 

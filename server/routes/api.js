@@ -2,6 +2,7 @@ const express = require("express");
 const Test = require("../schemas/test");
 const Mission = require("../schemas/mission");
 const User = require("../schemas/user");
+const Association = require("../schemas/association");
 const router = express.Router();
 
 router.get("/", (req, res) => {
@@ -15,7 +16,7 @@ router.get("/", (req, res) => {
 });
 
 router.get("/associations/", (req, res) => {
-  Mission.find({})
+  Association.find({})
     .then((data1) => {
       res.json(data1);
     })
@@ -30,8 +31,8 @@ router.get("/:slug", (req, res) => {
     .catch(err => res.status(404).json({ nomissionfound: 'No Mission found' }));
 });
 
-router.get("/associations/:assoslug", (req, res) => {
-  Mission.findOne({ assoslug: req.params.assoslug })
+router.get("/associations/:slug", (req, res) => {
+  Association.findOne({ slug: req.params.slug })
     .then(assos => res.json(assos))
     .catch(err => res.status(404).json({ nomassosfound: 'No Assos found' }));
     

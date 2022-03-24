@@ -5,20 +5,23 @@ import { useParams, useNavigate } from "react-router";
 export default function AssociationPage() {
  const [form, setForm] = useState({
    localisation: "",
-   assoImg: "",
-   assoTitle: "",
-   assoBody: "",
-   assoContact: "",
-   assoFB: "",
+   image1: "",
+   image2: "",
+   logo: "",
+   title: "",
+   body1: "",
+   body2: "",
+   contact: "",
+   FB: "",
  });
  const params = useParams();
  const navigate = useNavigate();
  
  useEffect(() => {
    async function fetchData() {
-     const assoslug = params.assoslug.toString();
+     const slug = params.slug.toString();
 
-     const response = await fetch(`http://localhost:8080/api/associations/${params.assoslug.toString()}`);
+     const response = await fetch(`http://localhost:8080/api/associations/${params.slug.toString()}`);
  
      if (!response.ok) {
        const message = `An error has occurred: ${response.statusText}`;
@@ -28,7 +31,7 @@ export default function AssociationPage() {
  
      const record = await response.json();
      if (!record) {
-       window.alert(`Association with id ${assoslug} not found`);
+       window.alert(`Association with id ${slug} not found`);
        navigate("/");
        return;
      }
@@ -39,7 +42,7 @@ export default function AssociationPage() {
    fetchData();
  
    return;
- }, [params.assoslug, navigate]);
+ }, [params.slug, navigate]);
  
 
  
@@ -50,11 +53,14 @@ export default function AssociationPage() {
     
 
      <p>{form.localisation}</p>
-     <img alt={form.assoTitle} src={form.assoImg}/>
-     <p>{form.assoTitle}</p>
-     <p>{form.assoBody}</p>
-     <p>{form.assoContact}</p>
-     <a href={form.assoFB}>Voir Facebook</a>
+     <img alt={form.title} src={form.logo}/>
+     <p>{form.title}</p>
+     <p>{form.body1}</p>
+     <p>{form.body2}</p>
+     <img alt={form.title} src={form.image1}/>
+     <img alt={form.title} src={form.image2}/>
+     <p>{form.contact}</p>
+     <a href={form.FB}>Voir Facebook</a>
 
 
       

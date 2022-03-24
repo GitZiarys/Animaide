@@ -16,11 +16,7 @@ class SearchMissions extends React.Component {
     localisationTag: "",
     image: "",
     posts: [],
-    isToggleOn: true,
-    isToggleOn2: true,
-    isToggleOn3: true,
     search: "",
-    search2: "",
   };
 
   componentDidMount = () => {
@@ -59,7 +55,7 @@ class SearchMissions extends React.Component {
 
     return posts.sort((a, b) => b._id.localeCompare(a._id)).filter((postTag) => postTag.title.toLowerCase().includes(dataSearch)).map((post, index) => (
       <div className="result2" key={index}>
-        {/* <img src={post.image} alt="mission" /> */}
+        <img src={post.image} alt={post.title} />
         <h3>{post.title}</h3>
         <p>{post.body1}</p>
         <Link to={"/missions/"+post.slug}>Voir mission</Link>

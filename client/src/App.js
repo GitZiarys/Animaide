@@ -34,7 +34,7 @@ const App = () => {
           <Route path="/missions" element={<><Missions /></>} />
           <Route path="/missions/:slug" element={<><Page /></>} />
           <Route path="/associations" element={<><Associations /></>} />
-          <Route path="/associations/:assoslug" element={<><PageAssoc /></>} />
+          <Route path="/associations/:slug" element={<><PageAssoc /></>} />
         </Routes>
       </RestoreScroll>
       </div> 
