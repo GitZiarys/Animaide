@@ -1,6 +1,12 @@
 import React from "react";
 import "../App.css";
 
+import {Link } from "react-router-dom";
+
+const Header_button = {
+    display: "inline-block",
+};
+
 const AnimaideEngage = () => {
   return (
         <section className="container_animaide_engage">
@@ -22,7 +28,7 @@ const AnimaideEngage = () => {
                     <p className="animaide_engage_subtitle_description">Suivez avec nous les causes qui vous importent et sauvez nos amis les animaux</p>
                 </div>
             </div>
-            <a className="animaide_engage_button" href="/register">Inscription</a>
+            <Link className="animaide_engage_button" to={"/register"} style={Header_button}> Inscription </Link>
         </section>
   );
 }
