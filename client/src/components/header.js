@@ -56,7 +56,7 @@ class Header extends React.Component{
 
               <Link
                 className="header_button connect"
-                href="/login"
+                to={"/login"}
                 onClick={this.logOut} style={Header_button}
               >
                 Déconnexion
